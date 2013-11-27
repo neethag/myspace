@@ -1,0 +1,77 @@
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\Users\Neethag>cd\
+
+C:\>cd sei
+
+C:\sei>wsimport -keep -s src http://www.webservicex.net/geoipservice.asmx?WSDL
+parsing WSDL...
+
+
+[ERROR] file:/C:/sei/ûkeep is unreachable
+
+
+        Failed to parse the WSDL.
+
+C:\sei>wsimport http://www.webservicex.net/geoipservice.asmx?WSDL -keep -s src
+parsing WSDL...
+
+
+[WARNING] Ignoring SOAP port "GeoIPServiceSoap12": it uses non-standard SOAP 1.2
+ binding.
+You must specify the "-extension" option to use this binding.
+  line 197 of http://www.webservicex.net/geoipservice.asmx?WSDL
+
+[WARNING] ignoring port "GeoIPServiceHttpGet": no SOAP address specified. try ru
+nning wsimport with -extension switch.
+  line 200 of http://www.webservicex.net/geoipservice.asmx?WSDL
+
+[WARNING] ignoring port "GeoIPServiceHttpPost": no SOAP address specified. try r
+unning wsimport with -extension switch.
+  line 203 of http://www.webservicex.net/geoipservice.asmx?WSDL
+
+
+Generating code...
+
+
+Compiling code...
+
+
+C:\sei>asadmin
+'asadmin' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\sei>cd ../
+
+C:\>cd "Program Files"/glassfish4/
+
+C:\>cd C:\glassfish4\bin
+
+C:\glassfish4\bin>asadmin
+Use "exit" to exit and "help" for online help.
+asadmin> restart domain1
+Command restart not found.
+Check the entry of command name. This command may be provided by a package that
+is not installed.
+Terminate batch job (Y/N)?
+Terminate batch job (Y/N)? y
+
+C:\glassfish4\bin>asadmin
+Use "exit" to exit and "help" for online help.
+asadmin> startdomain
+Command startdomain not found.
+Check the entry of command name. This command may be provided by a package that
+is not installed.
+Closest matching local and remote command(s):
+    start-domain
+
+Command startdomain failed.
+asadmin> start-domain
+There is a process already using the admin port 4848 -- it probably is another i
+nstance of a GlassFish server.
+Command start-domain failed.
+asadmin>
+
+********************
+Changes were made
